@@ -8,8 +8,8 @@ import unittest
 @pytest.mark.usefixtures("setUp", "oneTimeSetUp")
 class LoginTests(unittest.TestCase):
 
-    valid_email = "alexandrpopovme@gmail.com"
-    valid_password = "Miralova2020$"
+    valid_email = ""
+    valid_password = ""
 
     @pytest.fixture(autouse=True)
     def classSetup(self, oneTimeSetUp):

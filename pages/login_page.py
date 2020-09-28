@@ -13,27 +13,21 @@ class LoginPage(CarcassPage):
         self.driver = driver
 
     # All locator variables for the elements from the page go here:
-    _login_link = "//div[@class='header__user']/a"
-    _email_field = "office-auth-login-username"
-    _password_field = "office-login-form-password"
-    _login_button = "//button[contains(text(), 'Log in')]"
-    _login_validated_message = "//div[@class='msrpc-promo']"
-    _login_error_message = "//div[@class='jGrowl-notification alert ui-state-highlight ui-corner-all office-message-error']"
-
-    # All test data goes here:
-    valid_email = "alexandrpopovme@gmail.com"
-    valid_password = "Miralova2020$"
-    invalid_email = tool.getuniqueemail()
-    invalid_password = tool.getuniquepassword()
+    _login_link = ""
+    _email_field = ""
+    _password_field = ""
+    _login_button = ""
+    _login_validated_message = ""
+    _login_error_message = ""
 
 
     def clickLoginLink(self):
         self.elementClick(self._login_link)
 
-    def enterEmail(self, email, typeOfLocator="id"):
+    def enterEmail(self, email, typeOfLocator=""):
         self.sendKeys(email, self._email_field)
 
-    def enterPassword(self, password, typeOfLocator="id"):
+    def enterPassword(self, password, typeOfLocator=""):
         self.sendKeys(password, self._password_field)
 
     def clickLoginButton(self):
